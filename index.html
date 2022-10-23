@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Mikrodinet</title>
+<title>Mikrodinet Github portfolio generator with your main languages</title>
+<meta name="description" content="Mikrodinet Github portfolio: Get a chart with the main languages within your repositories and your total number of stars.">
+<meta name="description" content="Mikrodinet How do I get my GitHub username? . Generate username from first name and last name . GitHub Gist: instantly share code, notes, and snippets. " />
+<meta name="description" content="Mikrodinet Git uses a username to associate commits with an identity. The Git username is not the same as your GitHub username." />
+<meta name="description" content="Mikrodinet Instant Username Search - GitHub
+Instant Username Search helps users find out if their username is taken on more than 100 social media sites." />
+<meta name="description" content="Mikrodinet Simple github portfolio generator, just provide your github username! Get a chart with the main languages within your repositories and your total number of stars:" />
+<meta name="google-site-verification" content="xrZXSnas5jQMYmRwjIt8b2NvP_2Er_MqpnPDxeRXFqk" />
+<link rel="canonical" href="https://mikrodinet.github.io ">
+<meta content="mikrodinet" name="keywords">
+<meta name="google-site-verification" content="mPlUTgdFTI4g-MwH3_kr53M-Kuue9t6eArZ3fOzoShs " />
+<meta name="facebook-domain-verification" content="yll6e5f6kpoicwzq8rychnidgfuxk8" />
+<meta property="og:url" content="https://mikrodinet.github.io">
+<meta property="og:type" content="website">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="320">
+
+<meta property="og:title" content="Mikrodinet Github portfolio generator with your main languages">
+<meta property="og:description" content="Mikrodinet Github portfolio: Get a chart with the main languages within your repositories and your total number of stars.">
+<meta property="og:image" content="/asset/img/ico.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@awfanspage">
+<meta name="twitter:creator" content="@awfanspage">
+
+<meta name="twitter:title" content="Mikrodinet Github portfolio generator with your main languages">
+<meta name="twitter:description" content="Mikrodinet Github portfolio: Get a chart with the main languages within your repositories and your total number of stars.">
+<meta name="twitter:image" content="/asset/img/ico.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+     crossorigin="anonymous"></script>
+<script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+<link rel="stylesheet" href="https://cdn.statically.io/gh/isradeleon/coraline/0.5.3/coraline-v0.5.3/coraline.min.css">
+<link href="https://cdn.statically.io/gh/isradeleon/flexboxlayout/1.0.0/production/flexboxlayout.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+<style>
+.hidden{
+display: none;
+}
+.spin-forever{
+animation-name: spin;
+animation-duration: 1000ms;
+animation-iteration-count: infinite;
+animation-timing-function: linear; 
+}
+.link:hover{
+background: transparent;
+}
+@keyframes spin {
+from {
+transform:rotate(0deg);
+}
+to {
+transform:rotate(360deg);
+}
+}
+.repository{
+padding: 10px;
+height: 100%;
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+crossorigin="anonymous"></script>
+<script async custom-element="amp-auto-ads"
+src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script> 
+
+<!-- =======================================================
+* Template Name: Personal - v1.1.1
+* Template URL: https://www.awdev.my.id
+* Author: awdev - Prenium ( https://github.com/marketplace/awdev-corporation/upgrade/1/CUSTOMER_ACCOUNT_ID )
+* License: https://www.awdev.my.id/license/
+======================================================== -->
+
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCFM42D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div style="position: fixed; top: 0; bottom: 0; right: 0; left: 0;" id="particles-js"></div>
+<main>
+<div v-if="!loading && ready">
+<!--  <div v-if="user.length > 0 && !loading"> -->
+<nav class="navbar fixed" style="border: none; background-color: rgba(255, 255, 255, 0.98)">
+
+<!-- This link will stay here on mobile and tablet -->
+<a class="link text-size-s" href="#top">{{user}}</a>
+
+<!-- CSS animated menu icon -->
+<input class="menu-toggle" type="checkbox" id="menu1">
+<label style="margin-left: auto;" class="burger-btn" for="menu1">
+<span class="burger-icon"></span>
+</label>
+
+<!-- This content will be responsive on mobile and tablet -->
+<div class="navbar-content text-size-s">
+<div class="navbar-end">
+<a class="link" href="#languages">
+Languages
+</a>
+<a class="link" href="#repositories">
+Repositories
+</a>
+</div>
+</div>
+
+</nav>
+
+<div id="top" class="site-section white" style="background: transparent;">
+
+<div class="container below-navbar text-center">
+<div class="circular-img profile" :style="{ backgroundImage: 'url('+object.avatar_url+')' }"></div>
+<h1 class="main-title">{{object.name ? object.name : object.login}}</h1>
+<p class="below-title">{{object.bio}}</p>
+<p class="below-title">
+<i class="fa fa-users"></i> Followers: {{object.followers}} | 
+<i class="fa fa-star"></i> Total stars: {{totalStars}}
+</p>
+</div>
+</div>
+
+<div id="languages" class="site-section">
+<div class="container below-navbar text-center">
+<h1>Main languages</h1>
+<p class="below-title">Total: {{Object.keys(languages).length}}</p>
+<template>
+<div>
+<apexchart width="100%" style="max-width: 600px; margin: auto;" type="donut" :options="options" :series="series"></apexchart>
+</div>
+</template>
+</div>
+</div>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-6827901881006590">
+</amp-auto-ads>
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+     crossorigin="anonymous"></script>
+<!-- display -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6827901881006590"
+     data-ad-slot="4584348588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-6827901881006590"
+     data-ad-slot="4584348588"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+<!-- And Adsense -->
+<div id="repositories" class="site-section white">
+<div class="container below-navbar">
+<h1 class="text-center">Repositories</h1>
+<p class="text-center below-title">Total: {{repositories.length}}</p>
+<div class="grid">
+<div v-for="repo in listing" class="col-4">
+<div class="repository flex column">
+<a target="_blank" :href="repo.html_url" class="text-size-6 text-bold">
+{{repo.name}}
+</a>
+<small>{{repo.description}}</small>
+<hr>
+<div>
+<strong v-if="repo.language" class="tag small rounded">
+{{repo.language}}
+</strong>
+<strong v-if="repo.stargazers_count" class="tag small rounded">
+<i class="far fa-star"></i> {{repo.stargazers_count}}
+</strong>
+</div>
+</div>
+</div>
+</div>
+
+<div class="text-center">
+<button v-on:click="showAll()" v-if="!showing && repositories.length > 9" class="btn small text-secondary rounded">
+<i class="fa fa-eye"></i> Show all
+</button>
+</div>
+</div>
+</div>
+
+<footer style="background: white; position: relative;">
+<div class="container text-size-s">
+<p>
+<a target="_blank" href="https://github.com/sponsors/wahyu9kdl">
+<i class="fab fa-github"></i>Mikrodinet
+</a><br>
+Made with <i class="far fa-heart"></i> by <a target="_blank" href="https://github.com/awdev-corporation">@awdev</a>
+</p>
+</div>
+</footer>
+
+</div>
+
+<div v-if="loading">
+<div class="site-section">
+<div class="container flex items-center justify-center column">
+<i class="fa fa-spinner spin-forever"></i>
+Loading...
+</div>
+</div>
+</div>
+
+<div v-if="!ready && !loading">
+<div class="site-section">
+<div class="container flex items-center justify-center column">
+<div style="width: 100%;" class="text-center">
+<h1>MIKRODINET</h1>
+<h2>Generator Github Portofolio</h2>
+<p class="below-title text-gray">Type the github username to generate a portflio for that profile:</p>
+<input v-model="user" class="rounded full-width" placeholder="github_username" style="max-width: 400px;" type="text">
+<br>
+</div>
+<button v-on:click="loadUserPortfolio()" class="btn rounded primary small inverted full-width" style="max-width: 400px;">
+Generate
+</button>
+</div>
+</div>
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS.load('particles-js', 'particles.json', function() {
+console.log('callback - particles.js config loaded');
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script>
+(function(){
+function getParameterByName(name) {
+var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+Vue.component('apexchart', VueApexCharts)
+var vue = new Vue({
+el:"main",
+data:{
+loading: false,
+user: '',
+object: {},
+ready: false,
+showing: false,
+languages: {},
+options: {
+labels: [],
+plotOptions: {
+pie: {
+donut: {
+labels:{
+show: true,
+value: {
+formatter: function (val) {
+return val + (val > 1 ? " repositories":" repository");
+}
+}
+}
+}
+}
+}
+},
+series: [],
+repositories: [],
+listing: [],
+totalStars: 0
+},
+methods:{
+showAll(){
+this.listing = this.repositories
+this.showing = true
+},
+loadUserPortfolio(){
+console.log(window.location.host)
+window.location.href = '?user='+this.user;
+},
+getUserData(){
+console.log(this.user)
+this.loading = true;
+
+this.ready = true;
+
+fetch( "https://api.github.com/users/"+this.user)
+.then(response => response.json())
+.then(data => {
+console.log(data);
+if(data.login){
+this.object = data;
+this.getUserRepos()
+}else{
+window.location.href = window.location.href.split('?')[0];
+}
+});
+},
+getUserRepos(){
+fetch( "https://api.github.com/users/"+this.user+"/repos?sort=updated")
+.then(response => response.json())
+.then(data => {
+console.log(data);
+this.repositories = data;
+
+if (this.repositories.length > 9) {
+this.listing = this.repositories.slice(0,9)
+this.listing.slice(0,9)
+}else{
+this.listing = this.repositories
+}
+
+for (let i = 0; i < data.length; i++) {
+const repo = data[i];
+this.totalStars+=repo['stargazers_count']
+if(repo.language){
+if(this.languages.hasOwnProperty(repo.language)){
+this.languages[repo.language]++
+}else{
+this.languages[repo.language] = 1
+}
+}
+}
+for (const key in this.languages) {
+this.options.labels.push(key)
+this.series.push(this.languages[key])
+}
+this.loading = false;
+console.log(this.languages)
+});
+},
+setUser(user){
+this.user = user
+this.getUserData()
+}
+}
+})
+
+var user = getParameterByName("user");
+if(user){
+vue.loading = true
+vue.setUser(getParameterByName("user"));
+}
+
+})();
+</script>
+<style type='text/css' scoped="">
+#table-outer{padding:7px 10px;margin:0 auto}
+#table-outer table{width:auto;margin:0 auto;border:none!important;}
+#table-outer table td{border:none!important;padding:0!important}
+#table-outer form{font:inherit}
+#table-outer label{display:block;text-align:right;margin:0 10px 0 0;padding:4px 0 0}
+#table-outer select[disabled]{opacity:.4}
+#post-searcher{display:block;margin:0;padding:0}
+#table-outer input,#table-outer select{width:100%;border:1px solid #dedede;border-radius:5px;margin:0 0 5px;padding:5px;font-family: Roboto,sans-serif!important;font-size:16px!important;font-weight:500!important;text-transform:capitalize!important;outline:0;color:#333!important;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+#table-outer select option{min-height:1.4em!important;}
+#table-outer input#feed-q{padding:5px 10px!important;}
+#feed-container{background:#fff;display:block;clear:both;margin:0;padding:0;list-style:none;overflow:hidden;position:relative;border-top:none}
+#feed-container li{list-style:none;margin:0;padding:0;border-top:1px solid #eee;color:#555;width:auto;float:left;display:inline}
+#feed-container li .inner{margin:15px 0;height:auto;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis}
+#feed-container li a{text-decoration:none;color:#2C2C2C;font-weight:500}
+#feed-container li a:hover{text-decoration:none;color:#E94141}
+#feed-container li .news-text{margin-top:5px;line-height:1.3em!important}
+#feed-container li img{margin:0 15px 5px 0;padding:7px 7px 7px 0;float:left;display:block;width:140px!important;}
+#result-desc{margin:0;padding:0;}
+#result-desc div,#result-desc span{display:block;margin:0;padding:5px 0 7px;color:#D64D52}
+#result-desc div{color:inherit}
+#feed-nav{margin:10px 0 30px;text-align:center;font-weight:500}
+#feed-nav a,#feed-nav span{border:1px solid #dedede;border-radius:5px;padding:0;color:#757575;text-decoration:none;display:block;height:30px;line-height:32px}
+#feed-nav a,#feed-nav span:hover{color:#1B1B1B}
+#feed-nav a:active,#feed-nav a:hover{color:#555}
+#feed-nav span{cursor:wait}
+@media (max-width:600px){#table-outer table{margin:0 auto;width:100%}
+#feed-container,#table-outer{margin:0 auto}
+#feed-container li .inner{margin:5px auto;height:auto}
+#feedContainer li{float:none;display:block;width:auto;height:auto}
+#feed-container li .news-text, #feedContainer:after,#feed-container li img{display:none!important}
+}
+@media (max-width:414px){#table-outer table td{display:block;text-align:center}
+#table-outer label{display:block;margin:0;padding:4px 0 0;text-align:center}
+#table-outer input, #table-outer select{margin:0 0 10px}
+}
+</style>
+<div id="table-outer">
+<table>
+<tbody>
+<tr>
+<td>
+<label for="feed-order">Urutkan artikel berdasarkan:</label>
+</td>
+<td>
+<select id="feed-order">
+<option selected value="published" />Artikel terbaru
+<option value="updated" />Artikel yang terakhir di update
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<label for="label-sorter">Filter artikel berdasarkan kategori:</label>
+</td>
+<td>
+<select disabled="" id="label-sorter">
+<option selected />Loading....
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<label for="feed-q">Cari artikel dengan kata kunci:</label>
+</td>
+<td>
+<form id="post-searcher">
+<input id="feed-q" placeholder="Ketik dan tekan ENTER" type="text" />
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<header id="result-desc"></header>
+<ul id="feed-container"></ul>
+<div id="feed-nav">
+</div>
+
+
+<script type='text/javaScript'>
+document.write;var loadToc,loadCategories,_toc={init:function(){var cfg={homePage:window.location.origin,maxResults:10,numChars:270,thumbWidth:140,thumbHeight:95,navText:"Tampilkan artikel selanjutnya &#9660;",resetToc:"Kembali ke Awal",noImage:"//2.bp.blogspot.com/-ex3V86fj4dQ/UrCQQa4cLsI/AAAAAAAAFdA/j2FCTmGOrog/s1100/no-thumbnail.png",loading:"<span>Memuat...</span>",counting:"<div>Memuat artikel...</div>",searching:"<span>Mencari...</span>"},w=window,d=document,el=function(id){return d.getElementById(id);},o={a:el('feed-order'),b:el('label-sorter').parentNode,c:el('post-searcher'),d:el('feed-q'),e:el('result-desc'),f:el('feed-container'),g:el('feed-nav'),h:d.getElementsByTagName('head')[0],i:0,j:null,k:'published',l:0,m:""},fn={a:function(){old=el('temporer-script');old.parentNode.removeChild(old);},b:function(param){var script=d.createElement('script');script.type="text/javascript";script.id="temporer-script";script.src=param;if(el('temporer-script'))fn.a();o.h.appendChild(script);},c:function(mode,tag,order){o.i++;o.e.innerHTML=cfg.counting;o.g.innerHTML=cfg[mode==1?"searching":"loading"];if(mode===0){fn.b(tag!==null?cfg.homePage+'/feeds/posts/summary/-/'+ tag+'?alt=json-in-script&start-index='+((o.i*cfg.maxResults)+ 1)+'&max-results='+ cfg.maxResults+'&orderby='+ order+'&callback=loadToc':cfg.homePage+'/feeds/posts/summary?alt=json-in-script&start-index='+((o.i*cfg.maxResults)+ 1)+'&max-results='+ cfg.maxResults+'&orderby='+ order+'&callback=loadToc');}else if(mode==1){fn.b(cfg.homePage+'/feeds/posts/summary?alt=json-in-script&start-index='+((o.i*cfg.maxResults)+ 1)+'&max-results='+ cfg.maxResults+'&q='+ tag+'&orderby='+ order+'&callback=loadToc');}
+o.j=(tag!==null)?tag:null;o.l=mode;o.a.disabled=true;o.b.children[0].disabled=true;},d:function(json){var _h;o.g.innerHTML="";o.e.innerHTML=o.l==1?'<span>Hasil penelusuran untuk kata kunci <b>&#8220;'+ o.m+'&#8221;</b> ('+ json.feed.openSearch$totalResults.$t+' Hasil)</span>':'<div>Total: '+ json.feed.openSearch$totalResults.$t+' Artikel</div>';if("entry"in json.feed){var a=json.feed.entry,b,c,_d,e="0 Komentar",f="",g;for(var i=0;i<cfg.maxResults;i++){if(i==a.length)break;b=a[i].title.$t;_d=("summary"in a[i])?a[i].summary.$t.replace(/<br ?\/?>/ig," ").replace(/<(.*?)>/g,"").replace(/<iframe/ig,"").substring(0,cfg.numChars):"";g=("media$thumbnail"in a[i])?a[i].media$thumbnail.url.replace(/.*?:\/\//g , "//").replace(/\/s[0-9]+\-c/,"\/s"+ cfg.thumbWidth+""):cfg.noImage.replace(/\/s[0-9]+\-c/,"\/s"+ cfg.thumbWidth+"");for(var j=0,jen=a[i].link.length;j<jen;j++){c=(a[i].link[j].rel=="alternate")?a[i].link[j].href:" ";}
+for(var k=0,ken=a[i].link.length;k<ken;k++){if(a[i].link[k].rel=="replies"&&a[i].link[k].type=="text/html"){e=a[i].link[k].title;break;}}
+_h=d.createElement('li');_h.innerHTML='<div class="inner"><img style="width:'+ cfg.thumbWidth+'px;height:'+ cfg.thumbHeight+'px;" src="'+ g+'" alt="'+ b+'"><a class="toc-title" href="'+ c+'" target="_blank" title="'+ b+'">'+ b+'</a><div class="news-text">'+ _d+'&hellip;<br style="clear:both;"></div></div>';o.f.appendChild(_h);}
+_h=d.createElement('a');_h.href='#load-more';_h.innerHTML=cfg.navText;_h.onclick=function(){fn.c(o.l,o.j,o.k);return false;};}else{_h=d.createElement('a');_h.href='#reset-content';_h.innerHTML=cfg.resetToc;_h.onclick=function(){o.i=-1;o.e.innerHTML=cfg.counting;o.f.innerHTML="";fn.c(0,null,'published');o.a.innerHTML=o.a.innerHTML;o.b.children[0].innerHTML=o.b.children[0].innerHTML;return false;};}
+o.g.appendChild(_h);o.a.disabled=false;o.b.children[0].disabled=false;},e:function(json){var a=json.feed.category,b='<select id="label-sorter"><option value="" selected disabled>Pilih Kategori...</option>';for(var i=0,len=a.length;i<len;i++){b+='<option value="'+ encodeURIComponent(a[i].term).replace(/%20/g, " ")+'">'+ encodeURIComponent(a[i].term).replace(/%20/g, " ")+'</option>';}
+b+='</select>';o.b.innerHTML=b;o.b.children[0].onchange=function(){o.i=-1;o.f.innerHTML="";o.g.innerHTML=cfg.loading;fn.c(0,this.value,o.k);};}};loadToc=fn.d;loadCategories=fn.e;fn.b('https://www.awdev.eu.org/feeds/posts/summary?alt=json-in-script&start-index='+(o.i+ 1)+'&max-results='+ cfg.maxResults+'&orderby=published&callback=loadToc');fn.b('https://www.awdev.eu.org/feeds/posts/summary?alt=json-in-script&max-results=0&orderby=published&callback=loadCategories');o.a.onchange=function(){o.i=-1;o.f.innerHTML="";o.g.innerHTML=cfg.counting;o.b.children[0].innerHTML=o.b.children[0].innerHTML;fn.c(0,null,this.value);o.k=this.value;};o.c.onsubmit=function(){o.i=-1;o.f.innerHTML="";o.m=o.d.value;fn.c(1,o.d.value,o.k);return false;};}};_toc.init();
+</script>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://goawdev.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<div>
+<script async src="https://cse.google.com/cse.js?cx=db5f08cfff3041318"></script>
+<a href="https://www.awdev.my.id/search/cse.html">
+<center><img id="animation" class="animated" src="https://blogger.googleusercontent.com/img/a/AVvXsEigCnLuAmH2fbduUDOIuwZ4I4Y7GMiHd_J9kzSFr-ADlGMnxg1zlfQ3cLd3jkG-bmQiE3Ai_vq4EDB8YEiYQp7OrDhkwFPMknhrc4uBtEBrnlP1aVl9moGoYX1hMgu6uCj9mneW7vZmHNezj1uCM_UI7mJ1CukDmjP54cSAz_OGIcT5ypYUbPFLV_lm3g=s250 " />
+</center></a>
+<center>
+<div class="gcse-search"></div></center>
+</body>
+</html>
